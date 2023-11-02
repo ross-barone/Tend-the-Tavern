@@ -85,7 +85,8 @@ public class CameraController : MonoBehaviour
         {
             newLocation.x += 6 * camWidth;
         }
-        mainCam.transform.position = newLocation;
+        mainCam.transform.position = new Vector3(newLocation.x, newLocation.y, -10);
+
 
         //now update the enum
         switch (currentArea)
@@ -127,7 +128,7 @@ public class CameraController : MonoBehaviour
         {
             newLocation.x -= 6 * camWidth;
         }
-        mainCam.transform.position = newLocation;
+        mainCam.transform.position = new Vector3(newLocation.x, newLocation.y, -10);
 
         //now update the enum
         switch (currentArea)
