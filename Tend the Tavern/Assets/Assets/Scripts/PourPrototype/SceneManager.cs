@@ -11,6 +11,10 @@ public class SceneManager : MonoBehaviour
     public MouseBehavior cursor;
     public bool hideCursor;
 
+    public TrayBehavior tray;
+    private GameObject toAdd;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,5 +27,13 @@ public class SceneManager : MonoBehaviour
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = Camera.main.nearClipPlane;
         worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
+    }
+
+    /// <summary>
+    /// Pass clicked item to tray
+    /// </summary>
+    public void addToTray(GameObject obj)
+    {
+        tray.addItem(toAdd);
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TrayBehavior : InteractableAbstract
 {
+    public List<GameObject> contents;
+    
     // Update is called once per frame
     void Update()
     {
@@ -13,5 +15,10 @@ public class TrayBehavior : InteractableAbstract
     protected override void onClick()
     {
         Debug.Log(name + " has been clicked!");
+    }
+
+    public void addItem(GameObject obj)
+    {
+        contents.Add(obj);
     }
 }
