@@ -13,7 +13,7 @@ public abstract class InteractableAbstract : MonoBehaviour
     /// </summary>
     virtual protected void OnMouseOver()
     {
-        if (mouse.clicking)
+        if (mouse.click)
         {
             onClick();
         }

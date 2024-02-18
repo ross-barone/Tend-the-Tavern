@@ -412,7 +412,7 @@ MonoBehaviour:
   - {fileID: 392430589}
   - {fileID: 543829437}
   - {fileID: 1633570161}
-  cursor: {fileID: 971040716}
+  cursor: {fileID: 971040719}
   hideCursor: 0
 --- !u!1 &543829437
 GameObject:
@@ -658,7 +658,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneManager: {fileID: 542846871}
   spriteRenderer: {fileID: 971040718}
-  clicking: 0
+  mouseDown: 0
+  click: 0
+  unclick: 0
 --- !u!1 &1334901504
 GameObject:
   m_ObjectHideFlags: 0

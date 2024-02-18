@@ -6,7 +6,9 @@ public class MouseBehavior : MonoBehaviour
 {
     [SerializeField] private SceneManager sceneManager;
     [SerializeField] private SpriteRenderer spriteRenderer;
-    public bool clicking = false;
+    public bool mouseDown = false;
+    public bool click = false;
+    public bool unclick = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,15 +22,24 @@ public class MouseBehavior : MonoBehaviour
         transform.position = sceneManager.worldPosition;
 
         // update mouse
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !mouseDown)
         {
             spriteRenderer.color = Color.black;
-            clicking = true;
+            mouseDown = true;
+            click = true;
         }
-        if (Input.GetMouseButtonUp(0))
+        else if (Input.GetMouseButtonUp(0) && mouseDown)
         {
             spriteRenderer.color = Color.white;
-            clicking = false;
+            mouseDown = false;
+            unclick = true;
         }
+        // reset pulse bools
+        else
+        {
+            click = false;
+            unclick = false;
+        }
+
     }
 }
