@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class TrayBehavior : InteractableAbstract
 {
-    public List<GameObject> contents;
+    [SerializeField] private List<GameObject> contents;
+    [SerializeField] public List<string> contentNamed;
     
     // Update is called once per frame
     void Update()
@@ -20,5 +21,7 @@ public class TrayBehavior : InteractableAbstract
     public void addItem(GameObject obj)
     {
         contents.Add(obj);
+        contentNamed.Add(obj.name);
+        Debug.Log(obj.name + " has been added to tray!");
     }
 }

@@ -20,6 +20,9 @@ public class CupBehavior : InteractableAbstract
         {
             onTray = true;
             transform.position = trayPosition;
+
+            //tell manager that cup has been clicked
+            sceneManager.addToTray(gameObject);
         }
         
         Debug.Log(name + " has been clicked!");

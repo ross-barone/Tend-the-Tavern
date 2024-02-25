@@ -6,7 +6,7 @@ using UnityEngine;
 public abstract class InteractableAbstract : MonoBehaviour
 {
     [SerializeField] MouseBehavior mouse;
-    [SerializeField] private SceneManager sceneManager;
+    [SerializeField] protected SceneManager sceneManager;
 
     /// <summary>
     /// While mouseover, will check for a click

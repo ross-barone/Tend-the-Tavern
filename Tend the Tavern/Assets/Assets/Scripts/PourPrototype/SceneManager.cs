@@ -12,7 +12,6 @@ public class SceneManager : MonoBehaviour
     public bool hideCursor;
 
     public TrayBehavior tray;
-    private GameObject toAdd;
     
 
     // Start is called before the first frame update
@@ -34,6 +33,6 @@ public class SceneManager : MonoBehaviour
     /// </summary>
     public void addToTray(GameObject obj)
     {
-        tray.addItem(toAdd);
+        tray.addItem(obj);
     }
 }
