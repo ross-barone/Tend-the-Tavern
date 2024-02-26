@@ -15,12 +15,12 @@ public abstract class InteractableAbstract : MonoBehaviour
     {
         if (mouse.click)
         {
-            onClick();
+            OnClick();
         }
     }
 
     /// <summary>
     /// Called when interactable is clicked on
     /// </summary>
-    abstract protected void onClick();
+    abstract protected void OnClick();
 }

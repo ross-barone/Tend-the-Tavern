@@ -13,7 +13,7 @@ public class CupBehavior : InteractableAbstract
         
     }
 
-    protected override void onClick()
+    protected override void OnClick()
     {
         //When clicked for the first time, cup moves to tray.
         if (!onTray)

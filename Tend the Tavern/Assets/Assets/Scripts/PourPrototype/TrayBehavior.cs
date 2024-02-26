@@ -13,7 +13,7 @@ public class TrayBehavior : InteractableAbstract
         
     }
 
-    protected override void onClick()
+    protected override void OnClick()
     {
         Debug.Log(name + " has been clicked!");
     }

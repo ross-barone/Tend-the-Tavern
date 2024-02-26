@@ -11,7 +11,7 @@ public class KegBehavior : InteractableAbstract
         
     }
 
-    protected override void onClick()
+    protected override void OnClick()
     {
         Debug.Log(name + " has been clicked!");
 
@@ -19,6 +19,7 @@ public class KegBehavior : InteractableAbstract
         if (sceneManager.tray.contentNamed.Contains("cup"))
         {
             Debug.Log("I'm going to fill this cup!");
+            sceneManager.swapCams(SceneManager.camState.keg);
         }
     }
 }
